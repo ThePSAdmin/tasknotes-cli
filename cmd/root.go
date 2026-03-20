@@ -10,6 +10,9 @@ import (
 )
 
 var (
+	Version   = "dev"
+	CommitSHA = "none"
+
 	vaultPath  string
 	formatFlag string
 )
