@@ -5,7 +5,8 @@ before:
     - go mod tidy
 
 builds:
-  - env:
+  - binary: tasknotes-cli
+    env:
       - CGO_ENABLED=0
     goos:
       - linux
@@ -53,6 +54,6 @@ brews:
     description: "CLI for managing TaskNotes tasks in an Obsidian vault"
     license: "MIT"
     test: |
-      system "#{bin}/tasknotes", "version"
+      system "#{bin}/tasknotes-cli", "version"
     install: |
-      bin.install "tasknotes"
+      bin.install "tasknotes-cli"
